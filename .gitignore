@@ -1,35 +1,36 @@
-*/.classpath
-*/.launch
-*/.project
-*/.settings
-*/*.launch
-*/*.tmproj
-*/ivy*
-*/eclipse
-*.idea
-*.iml
+# Created by https://www.gitignore.io/api/grails
 
-*/prodDb.*
+### Grails ###
+# .gitignore for Grails 1.2 and 1.3
+# Although this should work for most versions of grails, it is
+# suggested that you use the "grails integrate-with --git" command
+# to generate your .gitignore file.
 
+# web application files
+/web-app/WEB-INF/classes
+
+# default HSQL database files for production mode
+/prodDb.*
+
+# general HSQL database files
 *Db.properties
 *Db.script
 
-*/stacktrace.log
-*/test/reports
-*/logs
+# logs
+/stacktrace.log
+/test/reports
+/logs
 
-*.zip
-plugin.xml
+# project release file
+/*.war
 
-*/plugins
-*/web-app/plugins
+# plugin release files
+/*.zip
+/plugin.xml
 
-*/target
-*/target-eclipse
+# older plugin install locations
+/plugins
+/web-app/plugins
 
-*.iws
-
-*.sublime-project
-*.sublime-workspace
-
-.DS_Store
+# "temporary" build files
+/target
