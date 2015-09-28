@@ -13,5 +13,9 @@ class Customer {
     String address
 
     static constraints = {
+        name nullable: false
+        birthDate nullable: false
+        address nullable: true, blank: false
+        phone nullable: true, maxSize: 11
     }
 }
