@@ -87,6 +87,9 @@ grails.hibernate.osiv.readonly = false
 
 grails.app.context = "/"
 
+grails.config.locations = ["file:c:/java-annotations-audit-log/external-datasource.properties"]
+
+
 environments {
     development {
         grails.logging.jul.usebridge = true

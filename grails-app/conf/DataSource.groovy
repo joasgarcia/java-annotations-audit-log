@@ -22,8 +22,8 @@ environments {
             dbCreate = "update"
             url = "jdbc:mysql://localhost/audit_log"
             driverClassName = "com.mysql.jdbc.Driver"
-            username = "root"
-            password = "informant"
+//            username = "<uncomment and put your database username here>"
+//            password = "<uncomment and put your database password here>"
         }
     }
     test {
