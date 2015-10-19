@@ -9,12 +9,15 @@ class CustomerService {
 
         customer.properties = params
 
+        //#1
         List<Map> listOfUpdatedFields = getUpdatedFields(customer)
 
         customer.save(flush: true, failOnError: true)
 
+        //#2
         listOfUpdatedFields.removeAll{ !Customer.getDeclaredField(it.fieldName).isAnnotationPresent(Auditable) }
 
+        //#3
         for (Map updatedField : listOfUpdatedFields) {
             customerHistoryService.save(customer, updatedField.fieldName, updatedField.oldValue, updatedField.newValue)
         }
